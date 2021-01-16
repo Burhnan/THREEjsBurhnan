@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My first three.js app</title>
+    <style>
+        body {
+            margin: 0;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="three.js"></script>
+    <script>
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.z = 5;
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        //object1
+        const geometry = new THREE.PlaneGeometry(1, 1, 1);
+        const material = new THREE.MeshBasicMaterial({
+            color: '#E89171',
+            side: THREE.DoubleSide
+        });
+        const plane1 = new THREE.Mesh(geometry, material);
+        plane1.position.x = 1
+        plane1.position.y = 0
+
+        scene.add(plane1);
+
+        //object2
+        const geometry2 = new THREE.PlaneGeometry(1, 1, 1);
+        const material2 = new THREE.MeshBasicMaterial({
+            color: '#84F7F8',
+            side: THREE.DoubleSide
+        });
+        const plane2 = new THREE.Mesh(geometry2, material2);
+        plane2.position.x = 0
+        plane2.position.y = 0
+
+        scene.add(plane2);
+
+        //object3
+        const geometry3 = new THREE.PlaneGeometry(1, 1, 1);
+        const material3 = new THREE.MeshBasicMaterial({
+            color: '#9AF884',
+            side: THREE.DoubleSide
+        });
+        const plane3 = new THREE.Mesh(geometry3, material3);
+        plane3.position.x = -1
+        plane3.position.y = 0
+
+        scene.add(plane3);
+
+        //object4 
+        const geometry4 = new THREE.PlaneGeometry(1, 1, 1);
+        const material4 = new THREE.MeshBasicMaterial({
+            color: '#E76B1E',
+            side: THREE.DoubleSide
+        });
+        const plane4 = new THREE.Mesh(geometry4, material4);
+        plane4.position.x = 1
+        plane4.position.y = 1
+        scene.add(plane4);
+
+        //object5 
+        const geometry5 = new THREE.PlaneGeometry(1, 1, 1);
+        const material5 = new THREE.MeshBasicMaterial({
+            color: '#E7D11E',
+            side: THREE.DoubleSide
+        });
+        const plane5 = new THREE.Mesh(geometry5, material5);
+        plane5.position.x = 0
+        plane5.position.y = 1
+        scene.add(plane5);
+
+        //object6 
+        const geometry6 = new THREE.PlaneGeometry(1, 1, 1);
+        const material6 = new THREE.MeshBasicMaterial({
+            color: '#12ABDF',
+            side: THREE.DoubleSide
+        });
+        const plane6 = new THREE.Mesh(geometry6, material6);
+        plane6.position.x = -1
+        plane6.position.y = 1
+        scene.add(plane6);
+
+        //object7 
+        const geometry7 = new THREE.PlaneGeometry(1, 1, 1);
+        const material7 = new THREE.MeshBasicMaterial({
+            color: '#23AC41',
+            side: THREE.DoubleSide
+        });
+        const plane7 = new THREE.Mesh(geometry7, material7);
+        plane7.position.x = 1
+        plane7.position.y = 2
+        scene.add(plane7);
+
+        //object8 
+        const geometry8 = new THREE.PlaneGeometry(1, 1, 1);
+        const material8 = new THREE.MeshBasicMaterial({
+            color: '#0864F9',
+            side: THREE.DoubleSide
+        });
+        const plane8 = new THREE.Mesh(geometry8, material8);
+        plane8.position.x = 0
+        plane8.position.y = 2
+        scene.add(plane8);
+
+        //object9 
+        const geometry9 = new THREE.PlaneGeometry(1, 1, 1);
+        const material9 = new THREE.MeshBasicMaterial({
+            color: "#F9082E",
+            side: THREE.DoubleSide
+        });
+        const plane9 = new THREE.Mesh(geometry9, material9);
+        plane9.position.x = -1
+        plane9.position.y = 2
+        scene.add(plane9);
+
+
+        const animate = function() {
+            requestAnimationFrame(animate);
+
+            plane1.rotation.x += 0.01;
+            plane1.rotation.y += 0.01;
+
+            plane2.rotation.x += 0.01;
+            plane2.rotation.y += 0.01;
+
+            plane3.rotation.x += 0.01;
+            plane3.rotation.y += 0.01;
+
+            plane4.rotation.x += 0.01;
+            plane4.rotation.y += 0.01;
+
+            plane5.rotation.x += 0.01;
+            plane5.rotation.y += 0.01;
+
+            plane6.rotation.x += 0.01;
+            plane6.rotation.y += 0.01;
+
+            plane7.rotation.x += 0.01;
+            plane7.rotation.y += 0.01;
+
+            plane8.rotation.x += 0.01;
+            plane8.rotation.y += 0.01;
+
+            plane9.rotation.x += 0.01;
+            plane9.rotation.y += 0.01;
+
+
+            renderer.render(scene, camera);
+        };
+
+        animate();
+    </script>
+</body>
+
+</html>
